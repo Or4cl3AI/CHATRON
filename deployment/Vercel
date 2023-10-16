@@ -1,0 +1,32 @@
+```javascript
+// Vercel deployment configuration
+
+module.exports = {
+  // Specify the Vercel project name
+  name: "chatron-ai",
+
+  // Specify the Vercel target
+  target: "serverless",
+
+  // Specify the Vercel build command
+  build: {
+    command: "npm run build",
+    // Specify the output directory for the build command
+    output: "build",
+  },
+
+  // Specify the Vercel routes
+  routes: [
+    {
+      src: "/api/.*",
+      dest: "/api/index.js",
+    },
+    {
+      src: "/(.*)",
+      dest: "/index.html",
+    },
+  ],
+};
+```
+
+Make sure to replace the `name` field with your desired Vercel project name. Additionally, if your build command or output directory is different, modify the `build` object accordingly.
