@@ -1,10 +1,17 @@
-```javascript
 // ./database/MongoDB.js
+
+/**
+ * Module for interacting with the MongoDB database.
+ */
 
 // Import the required dependencies
 const mongoose = require('mongoose');
 
-// Connect to the MongoDB database
+/**
+ * Connect to the MongoDB database.
+ * 
+ * @returns {Promise<void>} A promise that resolves when the connection is successful.
+ */
 mongoose.connect('mongodb://localhost/mydatabase', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -16,16 +23,22 @@ mongoose.connect('mongodb://localhost/mydatabase', {
     console.error('Failed to connect to MongoDB:', error);
   });
 
-// Define the schema for the data model
+/**
+ * Define the schema for the User data model.
+ */
 const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   age: Number,
 });
 
-// Create a model based on the schema
+/**
+ * Create a model based on the User schema.
+ */
 const User = mongoose.model('User', userSchema);
 
-// Export the User model
+/**
+ * Export the User model.
+ */
 module.exports = User;
 ```
