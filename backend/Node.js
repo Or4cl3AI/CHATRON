@@ -24,6 +24,13 @@ mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useU
 
 // Define routes
 app.get('/', (req, res) => {
+  /**
+   * Handle GET request for the root URL ("/").
+   * 
+   * @param {Object} req - The request object.
+   * @param {Object} res - The response object.
+   * @returns {void}
+   */
   res.send('Hello, world!');
 });
 
@@ -32,9 +39,6 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-```
-
-This code sets up a basic Node.js server using Express framework. It includes the necessary imports, middleware setup, MongoDB connection, and a simple route for the root URL ("/"). The server listens on the specified port (default is 3000) and logs a message when it starts running.
 
 Please note that you may need to modify the MongoDB connection URL (`mongodb://localhost/mydatabase`) based on your specific MongoDB setup.
 
