@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
  * @returns {Promise<void>} A promise that resolves when the connection is successful.
  */
 mongoose.connect('mongodb://localhost/mydatabase', {
+});
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
