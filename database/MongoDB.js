@@ -1,10 +1,10 @@
 // Assuming the original file looked like this:
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const unusedVariable = "I am not used anywhere";
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect("mongodb://localhost:27017/mydb", function(err, db) {
+MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
@@ -12,9 +12,9 @@ MongoClient.connect("mongodb://localhost:27017/mydb", function(err, db) {
 
 // The new file will look like this:
 
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect("mongodb://localhost:27017/mydb", function(err, db) {
+MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
