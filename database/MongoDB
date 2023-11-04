@@ -1,22 +1,2 @@
-// Define routes
-/**
- * Handle GET request for the root URL ("/").
- * 
- * @param {Object} req - The request object.
- * @param {Object} res - The response object.
- * @returns {void}
- */
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-// Start the server
-const port = process.env.PORT || 3000;
-/**
- * Start the server and listen on the specified port.
- * 
- * @returns {void}
- */
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// Removed route handling and server startup code
+// This file should only contain code related to the MongoDB database
