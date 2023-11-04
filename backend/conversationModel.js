@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ConversationSchema = new mongoose.Schema({
   user: String,
-  messages: Array
+  messages: Array,
 });
 
-module.exports = mongoose.model('Conversation', ConversationSchema);
+module.exports = mongoose.model("Conversation", ConversationSchema);
