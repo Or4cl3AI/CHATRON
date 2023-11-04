@@ -43,10 +43,10 @@ function Chatron() {
   );
 }
 
-export default Chatron;
-      <button onClick={downloadConversations}>Download Conversations</button>
-    </div>
-  );
+<>
+  <Chatron />
+  <button onClick={downloadConversations}>Download Conversations</button>
+</>
 
   function downloadConversations() {
     axios.get('/')
