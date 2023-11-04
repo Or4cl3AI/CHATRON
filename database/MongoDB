@@ -1,31 +1,22 @@
-```javascript
-// ./database/MongoDB.js
-
-// Import the required dependencies
-const mongoose = require('mongoose');
-
-// Connect to the MongoDB database
-mongoose.connect('mongodb://localhost/mydatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((error) => {
-    console.error('Failed to connect to MongoDB:', error);
-  });
-
-// Define the schema for the data model
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  age: Number,
+// Define routes
+/**
+ * Handle GET request for the root URL ("/").
+ * 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
 });
 
-// Create a model based on the schema
-const User = mongoose.model('User', userSchema);
-
-// Export the User model
-module.exports = User;
-```
+// Start the server
+const port = process.env.PORT || 3000;
+/**
+ * Start the server and listen on the specified port.
+ * 
+ * @returns {void}
+ */
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
