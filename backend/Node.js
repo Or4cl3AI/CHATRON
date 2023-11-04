@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 // Create an instance of Express
-const app = express();
+const expressApp = express();
 
 // Set up body-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -35,19 +35,19 @@ mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useU
  * @param {Object} res - The response object.
  * @returns {void}
  */
-app.get('/', (req, res) => {
+expressApp.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
 // Start the server
-const port = process.env.PORT || 3000;
+const serverPort = process.env.PORT || 3000;
 /**
  * Start the server and listen on the specified port.
  * 
  * @returns {void}
  */
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+expressApp.listen(serverPort, () => {
+  console.log(`Server is running on port ${serverPort}`);
 });
 
 This code sets up a basic Node.js server using Express framework. It includes the necessary imports, middleware setup, MongoDB connection, and a simple route for the root URL ("/"). The server listens on the specified port (default is 3000) and logs a message when it starts running.
