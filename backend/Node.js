@@ -1,6 +1,3 @@
-Sure! Here's the code for the `./backend/Node.js` file:
-
-```javascript
 // Import required modules
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -49,9 +46,3 @@ const serverPort = process.env.PORT || 3000;
 expressApp.listen(serverPort, () => {
   console.log(`Server is running on port ${serverPort}`);
 });
-
-This code sets up a basic Node.js server using Express framework. It includes the necessary imports, middleware setup, MongoDB connection, and a simple route for the root URL ("/"). The server listens on the specified port (default is 3000) and logs a message when it starts running.
-
-Please note that you may need to modify the MongoDB connection URL (`mongodb://localhost/mydatabase`) based on your specific MongoDB setup.
-
-Let me know if you need any further assistance!
