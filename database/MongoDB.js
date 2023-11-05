@@ -10,8 +10,6 @@ MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
   db.close();
 });
 
-// The new file will look like this:
-
 const MongoClient = require("mongodb").MongoClient;
 
 MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
@@ -29,7 +27,7 @@ const connectDB = async () => {
       useFindAndModify: false,
       useCreateIndex: true,
     });
-    console.log("MongoDB Connected...");
+    console.log("  MongoDB Connected...");
   } catch (err) {
     console.error(err.message);
     process.exit(1);
