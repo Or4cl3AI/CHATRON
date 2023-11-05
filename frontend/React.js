@@ -41,7 +41,7 @@ function Chatron() {
       </ol>
     </div>
     <button onClick={downloadConversations}>Download Conversations</button>
-    </>
-  }
+  </div>
+  );
 
 export default Chatron;
