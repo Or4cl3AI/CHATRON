@@ -1,7 +1,6 @@
 // Assuming the original file looked like this:
 
-const mongoose = require("mongoose");
-const unusedVariable = "I am not used anywhere";
+// Removed unused import and variable
 const MongoClient = require("mongodb").MongoClient;
 
 MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
@@ -19,7 +18,7 @@ MongoClient.connect("mongodb://localhost:27017/mydb", function (err, db) {
   console.log("Database created!");
   db.close();
 });
-const mongoose = require("mongoose");
+// Removed unused import
 
 const connectDB = async () => {
   try {
