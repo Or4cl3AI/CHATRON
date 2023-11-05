@@ -1,2 +1,2 @@
-// Removed route handling and server startup code
-// This file should only contain code related to the MongoDB database
+// Removed route handling and server startup code.
+// This file should only contain code related to the MongoDB database.
